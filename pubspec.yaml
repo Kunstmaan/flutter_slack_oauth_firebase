@@ -8,8 +8,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_slack_oauth:
-    path: ../flutter_slack_oauth
+  flutter_slack_oauth: ^0.1.0
   firebase_auth: ^0.5.2
 
 
