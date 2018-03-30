@@ -2,7 +2,7 @@
 
 # flutter_slack_oauth_firebase
 
-Extension for the flutter_slack_oauth library that handles login via Firebase Auth.
+Extension for our [flutter_slack_oauth](https://pub.dartlang.org/packages/flutter_slack_oauth) library which adds support for Firebase Authentication and Cloud Firestore.
 
 ![](docs/img/button.png)
 
