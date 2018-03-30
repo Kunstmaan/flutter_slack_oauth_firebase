@@ -18,9 +18,11 @@ Extension for the flutter_slack_oauth library that handles login via Firebase Au
 * The resulting access token for Slack is stored in Firebase Firestore in the `slackAccessToken` collection under a document with the Slack UID as document id.
 * User info returned from the Slack login is stored in Firebase Firestore in the `users` collection under a document with the Slack UID as document id.
 * You can easily find the Slack UID for the current user after login:
+
 ``` dart
 FirebaseUser user = await _auth.currentUser();
 print(user.uid);
+
 ```
 
 ### Full Example
