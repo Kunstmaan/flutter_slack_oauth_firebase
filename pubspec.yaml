@@ -8,8 +8,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_slack_oauth: ^0.1.0
-  firebase_auth: ^0.5.2
+  flutter_slack_oauth: ^0.1.1
+  firebase_auth: ^0.5.3
 
 
 dev_dependencies:
