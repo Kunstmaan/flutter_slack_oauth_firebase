@@ -10,7 +10,7 @@ dependencies:
 
   flutter_slack_oauth: ^0.1.1
   firebase_auth: ^0.5.3
-
+  flutter_webview_plugin: ^0.1.5
 
 dev_dependencies:
   test: ^0.12.0

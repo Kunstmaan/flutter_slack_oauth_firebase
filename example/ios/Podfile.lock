@@ -47,8 +47,8 @@ PODS:
 DEPENDENCIES:
   - firebase_auth (from `Pods/.symlinks/plugins/firebase_auth-0.5.3/ios`)
   - Flutter (from `Pods/.symlinks/flutter/ios`)
-  - flutter_webview_plugin (from `Pods/.symlinks/plugins/flutter_webview_plugin-0.1.3/ios`)
-  - shared_preferences (from `Pods/.symlinks/plugins/shared_preferences-0.4.0/ios`)
+  - flutter_webview_plugin (from `Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/ios`)
+  - shared_preferences (from `Pods/.symlinks/plugins/shared_preferences-0.4.1/ios`)
 
 EXTERNAL SOURCES:
   firebase_auth:
@@ -56,9 +56,9 @@ EXTERNAL SOURCES:
   Flutter:
     :path: Pods/.symlinks/flutter/ios
   flutter_webview_plugin:
-    :path: Pods/.symlinks/plugins/flutter_webview_plugin-0.1.3/ios
+    :path: Pods/.symlinks/plugins/flutter_webview_plugin-0.1.5/ios
   shared_preferences:
-    :path: Pods/.symlinks/plugins/shared_preferences-0.4.0/ios
+    :path: Pods/.symlinks/plugins/shared_preferences-0.4.1/ios
 
 SPEC CHECKSUMS:
   Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
