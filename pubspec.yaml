@@ -1,15 +1,15 @@
 name: flutter_slack_oauth_firebase
 description: Extension on the flutter_slack_oauth library that handles login via Firebase Auth and FireStore.
-version: 0.0.1
+version: 0.0.2
 author: Kunstmaan <labs@kunstmaan.be>
-homepage: https://github.com/Kunstmaan/flutter_slack_oauth
+homepage: https://github.com/Kunstmaan/flutter_slack_oauth_firebase
 
 dependencies:
   flutter:
     sdk: flutter
 
-  flutter_slack_oauth: ^0.1.0
-  firebase_auth: ^0.5.2
+  flutter_slack_oauth: ^0.1.1
+  firebase_auth: ^0.5.3
 
 
 dev_dependencies:

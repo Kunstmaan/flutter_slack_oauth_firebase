@@ -20,12 +20,12 @@ class FirebaseSlackButton extends StatefulWidget {
 
   const FirebaseSlackButton(
       {@required this.clientId,
-        @required this.clientSecret,
-        @required this.onSuccess,
-        @required this.onCancelledByUser,
-        @required this.onFailure,
-        this.redirectUrl,
-        this.firebaseUrl});
+      @required this.clientSecret,
+      @required this.onSuccess,
+      @required this.onCancelledByUser,
+      @required this.onFailure,
+      this.redirectUrl,
+      this.firebaseUrl});
 
   bool get enabled => onSuccess != null;
 
@@ -37,7 +37,8 @@ class _FirebaseSlackButtonState extends State<FirebaseSlackButton>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return new GenericSlackButton(clientId: widget.clientId,
+    return new GenericSlackButton(
+        clientId: widget.clientId,
         clientSecret: widget.clientSecret,
         onSuccess: widget.onSuccess,
         onCancelledByUser: widget.onCancelledByUser,
@@ -49,30 +50,27 @@ class _FirebaseSlackButtonState extends State<FirebaseSlackButton>
     bool success;
 
     if (widget.firebaseUrl != null && widget.firebaseUrl.isNotEmpty) {
-      success =
-      await Navigator.of(context).push(new MaterialPageRoute<bool>(
-        builder: (BuildContext context) =>
-        new FirebaseSlackLoginWebViewPage(
-          clientId: widget.clientId,
-          clientSecret: widget.clientSecret,
-          redirectUrl: widget.redirectUrl == null
-              ? "https://kunstmaan.github.io/flutter_slack_oauth/success.html"
-              : widget.redirectUrl,
-          firebaseUrl: widget.firebaseUrl,
-        ),
-      ));
+      success = await Navigator.of(context).push(new MaterialPageRoute<bool>(
+            builder: (BuildContext context) =>
+                new FirebaseSlackLoginWebViewPage(
+                  clientId: widget.clientId,
+                  clientSecret: widget.clientSecret,
+                  redirectUrl: widget.redirectUrl == null
+                      ? "https://kunstmaan.github.io/flutter_slack_oauth/success.html"
+                      : widget.redirectUrl,
+                  firebaseUrl: widget.firebaseUrl,
+                ),
+          ));
     } else {
-      success = await Navigator
-          .of(context)
-          .push(new MaterialPageRoute<bool>(
-        builder: (BuildContext context) => new SlackLoginWebViewPage(
-          clientId: widget.clientId,
-          clientSecret: widget.clientSecret,
-          redirectUrl: widget.redirectUrl == null
-              ? "https://kunstmaan.github.io/flutter_slack_oauth/success.html"
-              : widget.redirectUrl,
-        ),
-      ));
+      success = await Navigator.of(context).push(new MaterialPageRoute<bool>(
+            builder: (BuildContext context) => new SlackLoginWebViewPage(
+                  clientId: widget.clientId,
+                  clientSecret: widget.clientSecret,
+                  redirectUrl: widget.redirectUrl == null
+                      ? "https://kunstmaan.github.io/flutter_slack_oauth/success.html"
+                      : widget.redirectUrl,
+                ),
+          ));
 
       // if success == null, user just closed the webview
     }
@@ -84,7 +82,6 @@ class _FirebaseSlackButtonState extends State<FirebaseSlackButton>
       widget.onSuccess();
     }
   }
-
 }
 
 class FirebaseSlackLoginWebViewPage extends StatefulWidget {
@@ -121,7 +118,7 @@ class _FirebaseSlackLoginWebViewPageState
           String customToken = uri.queryParameters["customToken"];
 
           FirebaseUser user =
-          await _auth.signInWithCustomToken(token: customToken);
+              await _auth.signInWithCustomToken(token: customToken);
 
           if (user != null) {
             Navigator.of(context).pop(true);

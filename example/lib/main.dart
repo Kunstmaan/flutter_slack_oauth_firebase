@@ -17,16 +17,16 @@ void main() {
               clientId: "XXX_CLIENT_ID_XXX",
               clientSecret: "XXX_CLIENT_SECRET_XXX",
               redirectUrl:
-              "https://XXX-FIREBASE-PROJECT-XXX.firebaseapp.com/completed.html",
+                  "https://XXX-FIREBASE-PROJECT-XXX.firebaseapp.com/completed.html",
               firebaseUrl:
-              "https://XXX-FIREBASE-PROJECT-XXX.firebaseapp.com/index.html",
+                  "https://XXX-FIREBASE-PROJECT-XXX.firebaseapp.com/index.html",
               onSuccess: () async {
                 // get Firebase User:
                 FirebaseUser user = await _auth.currentUser();
 
                 Scaffold.of(context).showSnackBar(new SnackBar(
-                  content: new Text('Logged in with Slack ID ' + user.uid),
-                ));
+                      content: new Text('Logged in with Slack ID ' + user.uid),
+                    ));
               },
               onFailure: () {
                 Scaffold.of(context).showSnackBar(new SnackBar(
