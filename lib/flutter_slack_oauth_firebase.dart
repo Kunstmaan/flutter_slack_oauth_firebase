@@ -135,6 +135,8 @@ class _FirebaseSlackLoginWebViewPageState
         title: new Text("Log in with Slack"),
       ),
       url: widget.firebaseUrl,
+      clearCookies: true,
+      clearCache: true,
     );
   }
 }

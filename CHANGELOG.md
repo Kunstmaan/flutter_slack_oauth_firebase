@@ -6,3 +6,6 @@
 * The resulting access token is stored in Firebase Firestore in the `slackAccessToken` collection.
 * User info returned from the Slack login is stored in Firebase Firestore in the `users` collection.
 * Both collections contain documents with the Slack UID as the document name.
+
+## [0.0.3] - 18 May 2018
+* Clear the cache and cookies on webview access
