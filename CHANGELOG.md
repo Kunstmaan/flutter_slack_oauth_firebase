@@ -8,4 +8,7 @@
 * Both collections contain documents with the Slack UID as the document name.
 
 ## [0.0.3] - 18 May 2018
-* Clear the cache and cookies on webview access
+* Clear the cache and cookies on webview access.
+
+## [0.0.4] - 28 May 2018
+* Bugfix in tokenReceived function, thanks to [js1972](https://github.com/js1972) for pointing it out.

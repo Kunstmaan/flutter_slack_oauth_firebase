@@ -52,13 +52,7 @@ Please wait...
    */
   function tokenReceived(data) {
     if (data.token) {
-      window.location.href = "https://kunstmaan.github.io/flutter_slack_oauth/success.html?customToken=" + data.token
-
-      /*
-      firebase.auth().signInWithCustomToken(data.token).then(function() {
-        window.close();
-      });
-      */
+      window.location.href = "https://" + getFirebaseProjectId() + ".firebaseapp.com/completed.html?customToken=" + data.token
     } else {
       console.error(data);
       document.body.innerText = 'Error in the token Function: ' + data.error;
