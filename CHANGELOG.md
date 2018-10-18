@@ -1,5 +1,8 @@
+## [0.2.1] - 18 October 2018
+* **BREAKING - Required for Flutter 0.9.4 beta**
+* Updated deprecated dependencies.
+
 ## [0.2.0] - 28 September 2018
-* **BREAKING - Required for Flutter Release Preview 2**
 * Updated deprecated dependencies.
 
 ## [0.0.4] - 28 May 2018
