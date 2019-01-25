@@ -8,9 +8,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_slack_oauth: ^0.3.0
+  flutter_slack_oauth: ^0.3.1
   firebase_auth: ^0.6.2+1
-  flutter_webview_plugin: ^0.2.1+2
+  flutter_webview_plugin: ^0.3.0+2
 
 environment:
   sdk: ">=2.0.0-dev.28.0 <3.0.0"

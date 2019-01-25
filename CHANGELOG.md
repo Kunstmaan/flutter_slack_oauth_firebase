@@ -1,3 +1,6 @@
+## [0.3.1] - 25 January 2019
+* Bumped `flutter_webview_plugin` dependency for Flutter 1.0 compatibility
+
 ## [0.3.0] - 18 January 2019
 * Updated with new Slack icon
 * Refactored widgets to Stateless where possible
