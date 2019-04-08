@@ -1,3 +1,6 @@
+## [0.4.0] - 8 April 2019
+* **BREAKING** AndroidX support.
+
 ## [0.3.1] - 25 January 2019
 * Bumped `flutter_webview_plugin` dependency for Flutter 1.0 compatibility
 
