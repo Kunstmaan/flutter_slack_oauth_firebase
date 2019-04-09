@@ -1,3 +1,6 @@
+## [0.4.1] - 8 April 2019
+* Bumped flutter_slack_oauth dependency.
+
 ## [0.4.0] - 8 April 2019
 * **BREAKING** AndroidX support.
 
