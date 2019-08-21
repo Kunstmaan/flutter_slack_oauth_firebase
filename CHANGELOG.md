@@ -1,3 +1,6 @@
+## [0.4.2] - 21 August 2019
+* Bumped flutter_slack_oauth and firebase_auth dependencies.
+
 ## [0.4.1] - 8 April 2019
 * Bumped flutter_slack_oauth dependency.
 

@@ -37,7 +37,9 @@ class FirebaseSlackButton extends StatelessWidget {
         onSuccess: onSuccess,
         onCancelledByUser: onCancelledByUser,
         onFailure: onFailure,
-        onTap: () { onTap(context); });
+        onTap: () {
+          onTap(context);
+        });
   }
 
   onTap(BuildContext context) async {
@@ -45,8 +47,7 @@ class FirebaseSlackButton extends StatelessWidget {
 
     if (firebaseUrl != null && firebaseUrl.isNotEmpty) {
       success = await Navigator.of(context).push(new MaterialPageRoute<bool>(
-        builder: (BuildContext context) =>
-        new FirebaseSlackLoginWebViewPage(
+        builder: (BuildContext context) => new FirebaseSlackLoginWebViewPage(
           clientId: clientId,
           clientSecret: clientSecret,
           redirectUrl: redirectUrl == null
@@ -77,8 +78,6 @@ class FirebaseSlackButton extends StatelessWidget {
     }
   }
 }
-
-
 
 class FirebaseSlackLoginWebViewPage extends StatefulWidget {
   const FirebaseSlackLoginWebViewPage({
@@ -113,8 +112,9 @@ class _FirebaseSlackLoginWebViewPageState
           Uri uri = new Uri().resolve(changedUrl);
           String customToken = uri.queryParameters["customToken"];
 
-          FirebaseUser user =
+          AuthResult result =
               await _auth.signInWithCustomToken(token: customToken);
+          FirebaseUser user = result.user;
 
           if (user != null) {
             Navigator.of(context).pop(true);
